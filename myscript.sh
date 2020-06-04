@@ -95,3 +95,37 @@ function greet() {
 }
 
 greet "Shalin" "21"
+
+# PARAMETER ALIASES
+# $0 = script name
+# $1-$9 = first nine parameters for a command/program
+# $? = error message from previous command
+# $_ = last parameter from previous command
+# $# = number of parameters the program expects/can take
+# $$ = process id on your computer
+# $@ = list of the parameters
+
+# echo $? for true = 0 and for false = 1
+# || = or operator and && = and operator
+
+# VARIABLE SUBSTITUTION
+foo=$(pwd)
+echo "You are in $(pwd)"
+
+# PROCESS SUBSTITUTION
+# Redirects the output of a command to a file
+cat <(ls) <(ls ..)
+
+# GLOBBING/REG-EX
+# *.sh = any files that have an .sh extension
+# ? = any single character
+# touch foo{,1,2,3} = touch foo foo1 foo2 foo3
+# touch foo{0..3} = touch foo0 foo1 foo2 foo3 (can also do {a..f})
+# diff <(ls foo) <(ls bar) = difference in files between foo and bar directories
+
+# SHEBANGS
+# For shell: #!/usr/bin/bash
+# For python: #!/usr/bin/env python - can then run python scripts from bash just by typing ./script.py
+
+# download shellcheck tool for easier debugging
+# tldr tool for better manual pages for commands with examples
