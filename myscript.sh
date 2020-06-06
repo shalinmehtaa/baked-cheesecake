@@ -1,29 +1,29 @@
 #!/bin/bash
 
 # ECHO COMMAND
-echo Hello World!
+# echo Hello World!
 
 # VARIABLES
 # Uppercase by convention
 # Can include letters, numbers and underscores
-NAME="Shalin"
-echo "My name is $NAME"
+# NAME="Shalin"
+# echo "My name is $NAME"
 
 # USER INPUT
 # -p = prompt the user
-read -p "Enter your favourite number: " NUMBER
-echo "Your favourite number is $NUMBER"
+# read -p "Enter your favourite number: " NUMBER
+# echo "Your favourite number is $NUMBER"
 
 # IF-ELSE STATEMENTS
-if [ "$NAME" == "Shalin" ]
-then 
-    echo "You are the owner of this Mac"
-elif [ "$NAME" == "Sheetal" ]
-then 
-    echo "You are definitely the owner of this Mac"
-else 
-    echo "You are not the owner of this Mac"
-fi 
+# if [ "$NAME" == "Shalin" ]
+# then 
+#     echo "You are the owner of this Mac"
+# elif [ "$NAME" == "Sheetal" ]
+# then 
+#     echo "You are definitely the owner of this Mac"
+# else 
+#     echo "You are not the owner of this Mac"
+# fi 
 
 # COMPARISON OPERATORS
 # -gt = greater than
@@ -43,58 +43,76 @@ fi
 # -w file = True if the file is writable
 # -x file = True if the file is executable
 
-FILE="test.txt"
-if [ -f "$FILE" ]
-then 
-    echo "$FILE is a file"
-else
-    echo "$FILE is not a file"
-fi
+# FILE="test.txt"
+# if [ -f "$FILE" ]
+# then 
+#     echo "$FILE is a file"
+# else
+#     echo "$FILE is not a file"
+# fi
 
 # CASE STATEMENT
-read -p "Are you 21 or over? Y/N " ANSWER
-case "$ANSWER" in 
-    [yY] | [yY][eE][sS])
-        echo "You can have a beer :)"
-        ;;
-    [nN] | [nN][oO])
-        echo "Sorry, no beer for you"
-        ;;
-    *)
-        echo "Please enter y/yes or n/no"
-        ;;
-esac
+# read -p "Are you 21 or over? Y/N " ANSWER
+# case "$ANSWER" in 
+#     [yY] | [yY][eE][sS])
+#         echo "You can have a beer :)"
+#         ;;
+#     [nN] | [nN][oO])
+#         echo "Sorry, no beer for you"
+#         ;;
+#     *)
+#         echo "Please enter y/yes or n/no"
+#         ;;
+# esac
 
 # FOR LOOPS
-NAMES="Shalin Shimoli"
-for NAME in $NAMES 
-    do 
-        echo "Hello $NAME"
-done
+# NAMES="Shalin Shimoli"
+# for NAME in $NAMES 
+#     do 
+#         echo "Hello $NAME"
+# done
+
+# START=1
+# END=5
+# echo "Countdown..."
+# for (( c=$START; c<=$END; c++ ))
+#     do 
+#         echo -n "$c "
+#         sleep 1
+# done
+# echo
+# echo "Boom!"
 
 # FOR LOOP TO RENAME FILES
-FILES=$(ls ?.txt)
-NEW="new"
-for FILE in $FILES
-    do 
-        echo "Renaming $FILE to new-$FILE"
-        mv $FILE $NEW-$FILE
-done
+# FILES=$(ls ?.txt)
+# NEW="new"
+# for FILE in $FILES
+#     do 
+#         echo "Renaming $FILE to new-$FILE"
+#         mv $FILE $NEW-$FILE
+# done
 
 # WHILE LOOP - READ FILE LINE BY LINE
-LINE=1
-while read -r CURRENT_LINE
-    do
-        echo "$LINE: $CURRENT_LINE"
-        ((LINE++))
-done < "./new-1.txt"
+# LINE=1
+# while read -r CURRENT_LINE
+#     do
+#         echo "$LINE: $CURRENT_LINE"
+#         ((LINE++))
+# done < "./new-1.txt"
+
+# N=1
+# while [ $N -le 10 ]
+#      do
+#         echo "$N"
+#         N=$(( N+1 ))
+# done
 
 # FUNCTION
-function greet() {
-    echo "Hello! I am $1 and I am $2"
-}
+# function greet() {
+#     echo "Hello! I am $1 and I am $2"
+# }
 
-greet "Shalin" "21"
+# greet "Shalin" "21"
 
 # PARAMETER ALIASES
 # $0 = script name
@@ -109,12 +127,12 @@ greet "Shalin" "21"
 # || = or operator and && = and operator
 
 # VARIABLE SUBSTITUTION
-foo=$(pwd)
-echo "You are in $(pwd)"
+# foo=$(pwd)
+# echo "You are in $(pwd)"
 
 # PROCESS SUBSTITUTION
 # Redirects the output of a command to a file
-cat <(ls) <(ls ..)
+# cat <(ls) <(ls ..)
 
 # GLOBBING/REG-EX
 # *.sh = any files that have an .sh extension
@@ -129,3 +147,7 @@ cat <(ls) <(ls ..)
 
 # download shellcheck tool for easier debugging
 # tldr tool for better manual pages for commands with examples
+
+# ARRAYS
+# args=("$@")
+# echo ${args[0]} ${args[1]} ${args[2]}
