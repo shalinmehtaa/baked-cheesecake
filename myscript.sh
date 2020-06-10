@@ -133,7 +133,7 @@ greet "Shalin" "21"
 # cat <(ls) <(ls ..)
 
 # GLOBBING/REG-EX
-# *.sh = any files that have an .sh extension
+# *.sh = any files that have a .sh extension
 # ? = any single character
 # touch foo{,1,2,3} = touch foo foo1 foo2 foo3
 # touch foo{0..3} = touch foo0 foo1 foo2 foo3 (can also do {a..f})
